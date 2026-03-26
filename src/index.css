@@ -1,19 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #fffaf2;
-  --color-ink: #19150f;
+  --color-paper: #ffffff;
+  --color-ink: #4b5563;
   --font-sans: "Avenir Next", "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-serif: "Iowan Old Style", "Source Han Serif SC", "STSong", serif;
 }
 
 :root {
-  color: #19150f;
+  color: #4b5563;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color-scheme: light;
+  background: #eaf0f7;
 }
 
 * {
@@ -22,15 +23,15 @@
 
 html {
   scroll-behavior: smooth;
-  background: #eef1f7;
+  background: #eaf0f7;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.95), transparent 34%),
-    linear-gradient(180deg, #f7f8fb 0%, #eef1f7 38%, #e9edf4 100%);
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.78), transparent 34%),
+    linear-gradient(180deg, #eef2f8 0%, #e6ebf3 42%, #dde4ef 100%);
   font-family: var(--font-sans);
 }
 
@@ -43,18 +44,23 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+::selection {
+  background: rgba(129, 140, 248, 0.28);
+  color: #1f2937;
+}
+
 #root {
   min-height: 100vh;
 }
 
-@keyframes fade-slide-in {
+@keyframes reveal-card {
   from {
     opacity: 0;
-    transform: translateY(10px) scale(0.985);
+    transform: translateY(14px) scale(0.985) rotate(-1deg);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1) rotate(0);
   }
 }
